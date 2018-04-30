@@ -10,7 +10,6 @@
     <title>chanLily</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
-    <link href="css/common.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar-default navbar-fixed-top">
@@ -51,7 +50,7 @@
                 <a href="#"><span class="glyphicon glyphicon-star"></span>&nbsp;star</a></p>
         </div>
         <div class="media-right">
-            <a class="btn btn-primary" href="{{data.homepage}}" role="button">查看更多&rarr;</a>
+            <a class="btn btn-primary" :href="item.html_url" role="button">查看更多&rarr;</a>
         </div>
     </div>
 
