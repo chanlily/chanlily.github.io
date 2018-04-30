@@ -1,11 +1,72 @@
-    ---
-　　layout: default
-　　title: 我的Blog
-　　---
-　　<h2>{{ page.title }}</h2>
-　　<p>最新文章</p>
-　　<ul>
-　　　　{% for post in site.posts %}
-　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-　　　　{% endfor %}
-　　</ul>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="chanLily的博客">
+    <meta name="keywords" content="html,css,javascript,jquery,php,node.js,sql,bootstrap">
+    <meta name="author" content="chanLily">
+    <title>chanLily</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand c-fff" href="https://chanLily.github.io">
+                <span class="glyphicon glyphicon-home"></span>&nbsp;ChanLily</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <p class="navbar-text">一个关于web开发的静态博客</p>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://chanLily.github.io">GitHub</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="jumbotron mt-50">
+    <div class="container">
+        <h1>Hello, world!</h1>
+        <p>这是一个关于静态网站的博客</p>
+    </div>
+</div>
+<div class="container mb-30" id="vue_det">
+    <div class="media" v-for="item in data">
+        <div class="media-body">
+            <h4 class="media-heading">{{item.name}}</h4>
+            <p>{{item.description}}</p>
+            <p><a :href="item.html_url"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;文件信息</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#"><span class="glyphicon glyphicon-star"></span>&nbsp;star</a></p>
+        </div>
+        <div class="media-right">
+            <a class="btn btn-primary" href="{{data.homepage}}" role="button">查看更多&rarr;</a>
+        </div>
+    </div>
+
+</div>
+<nav class="navbar-default">
+    <div class="container">
+        <p class="navbar-text">一个关于web开发的静态博客</p>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">© 2018 chanLily</a></li>
+        </ul>
+    </div>
+</nav>
+<script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
