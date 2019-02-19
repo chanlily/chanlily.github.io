@@ -1,0 +1,6 @@
+.mt-50{margin-top: 50px;}
+.mb-30{margin-bottom: 30px;}
+.navbar-inverse .navbar-brand{color:rgba(255,255,255,0.8);}
+.jumbotron{background: url("../img/banner.jpg");color:#ffffff;background-size: cover;background-attachment: fixed;}
+.media-a{padding: 0 8px;height: 2em;line-height: 2em;display: inline-block;border: 1px solid #337a7b;border-radius: 8px;}
+.media{padding:15px 20px;box-shadow: 4px 5px 4px #f3f3f3;border: 1px solid rgba(0,0,0,0.2);border-radius: 5px;}
